@@ -15,7 +15,8 @@
 
 #define INI_FILETYPE                    int
 #define ini_openread(filename,file)     ((*(file) = open((filename),O_RDONLY, 0)) >= 0)
-#define ini_openwrite(filename,file)    ((*(file) = open((filename),O_WRONLY | O_TRUNC, 0)) >= 0) 
+#define ini_openwrite(filename,file)    ((*(file) = open((filename),O_WRONLY | O_TRUNC, 0)) >= 0)
+//#define ini_openrewrite(filename,file)  ((*(file) = open((filename),O_WRONLY, 0)) >= 0)O_TRUNC 
 #define ini_close(file)                 (close(*(file)) == 0)
 //#define ini_read(buffer,size,file)      (read(*(file), (buffer),(size)) > 0)
 #define ini_write(buffer,file)          write(*(file), (buffer), strlen(buffer))
