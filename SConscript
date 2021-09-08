@@ -9,6 +9,6 @@ if GetDepend(['MININI_USING_EXAMPLE']):
     src += Glob('example/*.c')
 
 CPPPATH = [cwd + '/dev']
-group = DefineGroup('minIni', src, depend = ['RT_USING_DFS', 'RT_USING_INI'], CPPPATH = CPPPATH)
+group = DefineGroup('minIni', src, depend = ['RT_USING_DFS', 'PKG_USING_MININI'], CPPPATH = CPPPATH)
 
 Return('group')
